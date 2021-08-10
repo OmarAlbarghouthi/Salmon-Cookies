@@ -1,4 +1,5 @@
 ' use strict';
+
 let locations = [];
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let container = document.getElementById('container');
@@ -27,7 +28,7 @@ Location.prototype.calcRandomCustPerHour = function (min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 
-}
+};
 
 Location.prototype.calcAvgCookiesPerH = function () {
   for (let i = 0; i < hours.length; i++) {
@@ -52,19 +53,18 @@ Location.prototype.render = function () {
 
   for (let i = 0; i < hours.length; i++) {
 
+
+
     let tdEl2 = document.createElement('td');
     trEl.appendChild(tdEl2);
     tdEl2.textContent = this.avgCookiesPerH[i];
 
   }
-
-  let tdEl5 = document.createElement('td');
-  trEl.appendChild(tdEl5);
-  tdEl5.textContent = this.total;
-
+  let tdEl3 = document.createElement('td');
+  trEl.appendChild(tdEl3);
+  tdEl3.textContent = this.total;
 
 };
-
 
 function TableHeader() {
 
@@ -83,8 +83,9 @@ function TableHeader() {
     trEl.appendChild(thEl1);
     thEl1.textContent = hours[x];
 
-
   }
+
+
 
 
   let thEl2 = document.createElement('th');
@@ -92,7 +93,19 @@ function TableHeader() {
 
   thEl2.textContent = 'Daily location total';
 
+
+
+
+  let tdEl5 = document.createElement('td');
+  trEl.appendChild(tdEl5);
+  tdEl5.textContent = this.total;
+
+
 }
+
+
+
+
 
 
 TableHeader();
@@ -101,20 +114,18 @@ TableHeader();
 
 function TableFooter() {
   let shopsTotal=0;
-  
 
   let trEl = document.createElement('tr');
   let thEl3 = document.createElement('th');
   tableEl.appendChild(trEl);
   trEl.appendChild(thEl3);
-  thEl3.textContent = "total";
- 
+  thEl3.textContent = 'total';
+
 
 
 
   for (let i = 0; i < hours.length; i++) {
     let hourlyTotal = 0;
-   
 
     for (let j = 0; j < locations.length; j++) {
       hourlyTotal += locations[j].avgCookiesPerH[i];
@@ -130,7 +141,7 @@ function TableFooter() {
   }
 
   for(let i=0;i<locations.length;i++){
-   
+
     shopsTotal += locations[i].total;
 
   }
@@ -166,7 +177,7 @@ let Lima = new Location('Lima', 2, 16, 4.6);
 Lima.calcRandomCustPerHour(2, 16);
 Lima.calcAvgCookiesPerH();
 Lima.render();
+
 TableFooter();
 console.log(locations);
-
 
