@@ -1,0 +1,147 @@
+body{
+    background-color: burlywood;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#e41212af;
+    background-color: burlywood;
+}
+
+#img{
+    display: block;
+    border-radius: 50%;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#one{
+    text-align: center;
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#e41212af;
+
+}
+
+ul li{
+   /* border: 1px solid red; */
+   background-color: rgb(240, 171, 82);
+   margin-top: 30px;
+   list-style-type:armenian;
+   font-weight: bold;
+   text-align: center;
+}
+#two{
+    text-align: center;
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#e41212af;
+}
+
+#hours{
+    background-color: rgb(240, 171, 82);
+   margin-top: 30px;
+   list-style-type:armenian;
+   font-weight: bold;
+   text-align: center;
+}
+
+#three{
+    text-align: center;
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#e41212af;
+}
+
+#lorem{
+    background-color: rgb(240, 171, 82);
+   margin-top: 30px;
+   list-style-type:armenian;
+   font-weight: bold;
+   text-align: center;
+}
+
+#a{
+    display: block;
+    border-radius: 50%;
+    width: 900px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#b{
+    display: block;
+    border-radius: 50%;
+    width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#c{
+    display: block;
+    border-radius: 50%;
+    width: 700px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#d{
+    display: block;
+    border-radius: 50%;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#e{
+    display: block;
+    border-radius: 50%;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#f{
+    display: block;
+    border-radius: 50%;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#g{
+    display: block;
+    border-radius: 50%;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+   
+    font-size: xx-large;
+    font-weight: bold;
+    color:#e41212af;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+
+table{
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
