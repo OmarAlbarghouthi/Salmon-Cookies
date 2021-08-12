@@ -104,29 +104,6 @@ function TableHeader() {
 
 }
 
-let form = document.getElementById('salmonCookiesForm');
-form.addEventListener('submit', addShopName);
-
-function addShopName(event) {
-  event.preventDefault();
-
-  let name = event.target.name.value;
-  let minNumberOfCust = event.target.minNumberOfCust.value;
-  let maxNumberOfCust = event.target.maxNumberOfCust.value;
-  let averageOfSoldCookies = event.target.averageOfSoldCookies.value;
-
-  let newLocation = new Location(name, minNumberOfCust, maxNumberOfCust, averageOfSoldCookies);
-  newLocation.calcRandomCustPerHour(3, 65);
-  newLocation.calcAvgCookiesPerH();
-  newLocation.render();
-
-
-
-}
-
-
-
-
 TableHeader();
 
 
@@ -171,6 +148,33 @@ function TableFooter() {
 
 }
 
+let form = document.getElementById('salmonCookiesForm');
+form.addEventListener('submit', addShopName);
+
+function addShopName(event) {
+  event.preventDefault();
+
+  let name = event.target.name.value;
+  let minNumberOfCust = event.target.minNumberOfCust.value;
+  let maxNumberOfCust = event.target.maxNumberOfCust.value;
+  let averageOfSoldCookies = event.target.averageOfSoldCookies.value;
+
+  let newLocation = new Location(name, minNumberOfCust, maxNumberOfCust, averageOfSoldCookies);
+  // newLocation.calcRandomCustPerHour(minNumberOfCust,maxNumberOfCust);
+  // // newLocation.calcAvgCookiesPerH();
+  // // newLocation.render();
+
+  let tableLeg = tableEl.rows.length-1;
+  tableEl.deleteRow(tableLeg);
+
+  newLocation.calcRandomCustPerHour(minNumberOfCust,maxNumberOfCust);
+
+
+  newLocation.calcAvgCookiesPerH();
+  newLocation.render();
+  TableFooter();
+
+}
 
 let Seattle = new Location('Seattle', 23, 65, 6.3);
 Seattle.calcRandomCustPerHour(3, 65);
