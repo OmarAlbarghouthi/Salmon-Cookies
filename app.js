@@ -95,7 +95,7 @@ function TableHeader() {
 
   thEl2.textContent = 'Daily location total';
 
-  
+
 
   // let tdEl5 = document.createElement('td');
   // trEl.appendChild(tdEl5);
@@ -122,7 +122,7 @@ function TableFooter() {
 
 
   for (let i = 0; i < hours.length; i++) {
-    let dailyTotal = 0;
+    // let dailyTotal = 0;
 
     let tdEl10 = document.createElement('td');
 
@@ -156,7 +156,7 @@ function addShopName(event) {
   let maxNumberOfCust = event.target.maxNumberOfCust.value;
   let averageOfSoldCookies = event.target.averageOfSoldCookies.value;
 
-  let tableLeg = tableEl.rows.length-1;
+  let tableLeg = tableEl.rows.length - 1;
   tableEl.deleteRow(tableLeg);
 
   let newLocation = new Location(name, minNumberOfCust, maxNumberOfCust, averageOfSoldCookies);
@@ -164,9 +164,9 @@ function addShopName(event) {
   // // newLocation.calcAvgCookiesPerH();
   // // newLocation.render();
 
-  
 
-  newLocation.calcRandomCustPerHour(minNumberOfCust,maxNumberOfCust);
+
+  newLocation.calcRandomCustPerHour(minNumberOfCust, maxNumberOfCust);
 
 
   newLocation.calcAvgCookiesPerH();
