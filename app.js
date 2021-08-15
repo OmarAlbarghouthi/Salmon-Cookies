@@ -9,7 +9,6 @@ container.appendChild(tableEl);
 
 
 
-
 function Location(shopName, minCustomers, maxCustomers, avgCookies) {
 
   this.name = shopName;
@@ -104,10 +103,6 @@ function TableHeader() {
 
 
 }
-
-
-
-
 TableHeader();
 
 
@@ -117,8 +112,6 @@ TableHeader();
 function TableFooter() {
 
   let total = 0;
-
-
   let trEl = document.createElement('tr');
   let thEl3 = document.createElement('th');
 
@@ -143,16 +136,6 @@ function TableFooter() {
     tdEl10.textContent = total;
 
   }
-};
-
-
-
-  for (let i = 0; i < locations.length; i++) {
-
-  for(let i=0;i<locations.length;i++){
-
-
-    dailyTotal += locations[i].total;
 
 
 
@@ -161,14 +144,8 @@ function TableFooter() {
   thEl70.textContent = total;
 
 }
-  
-
 
 let form = document.getElementById('form');
-
-
-
-
 form.addEventListener('submit', addShopName);
 
 function addShopName(event) {
@@ -198,8 +175,6 @@ function addShopName(event) {
 
 }
 
-
-
 let Seattle = new Location('Seattle', 23, 65, 6.3);
 Seattle.calcRandomCustPerHour(3, 65);
 Seattle.calcAvgCookiesPerH();
@@ -225,6 +200,8 @@ Lima.calcRandomCustPerHour(2, 16);
 Lima.calcAvgCookiesPerH();
 Lima.render();
 
-
 TableFooter();
 console.log(locations);
+
+
+
